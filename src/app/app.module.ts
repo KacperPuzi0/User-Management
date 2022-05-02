@@ -8,6 +8,7 @@ import { UsersListComponent } from './users-list/users-list.component';
 import { UsersEditComponent } from './users-edit/users-edit.component';
 import { RolesAndPermissionsComponent } from './roles-and-permissions/roles-and-permissions.component';
 import { SettingsComponent } from './settings/settings.component';
+import { UsersComponent } from './users/users.component';
 
 
 @NgModule({
@@ -17,11 +18,13 @@ import { SettingsComponent } from './settings/settings.component';
     UsersEditComponent,
     RolesAndPermissionsComponent,
     SettingsComponent,
+    UsersComponent,
 
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,1 +1,22 @@
-<p>users-edit works!</p>
+<div class="header">
+<div class="name">
+  <div *ngIf="user">
+    <h6>User / User Edit</h6>
+    <h2>{{ user.name }} {{ user.surname }}</h2>
+  </div>
+</div>
+
+<button type="button" class="btn btn-danger">DELETE</button>
+<button type="button" class="btn btn-secondary">BLOCK</button>
+<button type="button" class="btn btn-warning">SET PASSWORD</button>
+<button type="button" class="btn btn-primary">SAVE</button>
+</div>
+<!--
+<div class="conatainer1">
+
+</div>
+
+
+<div class="container2">
+
+</div> -->
