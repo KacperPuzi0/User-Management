@@ -1,22 +1,26 @@
-<div class="header">
-<div class="name">
-  <div *ngIf="user">
-    <h6>User / User Edit</h6>
-    <h2>{{ user.name }} {{ user.surname }}</h2>
+<div class="container-fluid" id="container">
+  <div class="name">
+    <div *ngIf="user">
+      <h6>User / User Edit</h6>
+      <h2>{{ user.name }} {{ user.surname }}</h2>
+    </div>
+    <div class="buttons">
+      <button type="button" class="btn button" id="delete">DELETE</button>
+      <button type="button" class="btn button" id="block">BLOCK</button>
+      <button type="button" class="btn button" id="set">SET PASSWORD</button>
+      <button type="button" class="btn button" id="save">SAVE</button>
+    </div>
+  </div>
+  <div class="col-6 border">
+    <nav>
+      <ul class="nav nav-tabs">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">Logs</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Permissions</a>
+        </li>
+      </ul>
+    </nav>
   </div>
 </div>
-
-<button type="button" class="btn btn-danger">DELETE</button>
-<button type="button" class="btn btn-secondary">BLOCK</button>
-<button type="button" class="btn btn-warning">SET PASSWORD</button>
-<button type="button" class="btn btn-primary">SAVE</button>
-</div>
-<!--
-<div class="conatainer1">
-
-</div>
-
-
-<div class="container2">
-
-</div> -->

@@ -1,0 +1,101 @@
+<div id="page-content-wrapper">
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+      <button class="btn btn" (click)="toggle()">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="16"
+          height="16"
+          fill="currentColor"
+          class="bi bi-list"
+          viewBox="0 0 16 16"
+        >
+          <path
+            fill-rule="evenodd"
+            d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"
+          />
+        </svg>
+      </button>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent"></div>
+    </div>
+  </nav>
+</div>
+
+<div class="d-flex">
+  <div
+    class="bg-light border-right"
+    id="sidebar-wrapper"
+    [ngClass]="status ? 'hide' : 'show'"
+  >
+    <div class="sidebar-heading"></div>
+    <div class="list-group list-group-flush">
+      <div class="date">
+        <p class="day">{{ dateTime | date: "cccc" }}</p>
+        <p class="month">{{ dateTime | date: "d MMMM" }}</p>
+        <p class="year">{{ dateTime | date: "YYYY" }}</p>
+      </div>
+
+      <h6>
+        <a class="user-label" text-decoration="none" routerLink="/users">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="16"
+            height="16"
+            fill="currentColor"
+            class="bi bi-wrench-adjustable-circle"
+            viewBox="0 0 16 16"
+          >
+            <path
+              d="M12.496 8a4.491 4.491 0 0 1-1.703 3.526L9.497 8.5l2.959-1.11c.027.2.04.403.04.61Z"
+            />
+            <path
+              d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0Zm-1 0a7 7 0 1 0-13.202 3.249l1.988-1.657a4.5 4.5 0 0 1 7.537-4.623L7.497 6.5l1 2.5 1.333 3.11c-.56.251-1.18.39-1.833.39a4.49 4.49 0 0 1-1.592-.29L4.747 14.2A7 7 0 0 0 15 8Zm-8.295.139a.25.25 0 0 0-.288-.376l-1.5.5.159.474.808-.27-.595.894a.25.25 0 0 0 .287.376l.808-.27-.595.894a.25.25 0 0 0 .287.376l1.5-.5-.159-.474-.808.27.596-.894a.25.25 0 0 0-.288-.376l-.808.27.596-.894Z"
+            />
+          </svg>
+
+          Users</a
+        >
+      </h6>
+      <ul class="users-menu">
+        <li>
+          <a
+            class="nav-link text-light pl-4 text-dark"
+            routerLink="/userslist"
+            >User List</a
+          >
+        </li>
+        <li>
+          <a class="nav-link text-light pl-4 text-dark" routerLink="/useredit"
+            >User Edit</a
+          >
+        </li>
+        <li>
+          <a
+            class="nav-link text-light pl-4 text-dark"
+            routerLink="/rolesandpermissions"
+            >Roles and Permissions</a
+          >
+        </li>
+        <li>
+          <a
+            class="nav-link text-light pl-4 text-dark"
+            routerLink="/settings"
+            >Seetings</a
+          >
+        </li>
+      </ul>
+    </div>
+  </div>
+  <router-outlet></router-outlet>
+</div>

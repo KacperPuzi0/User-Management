@@ -9,6 +9,7 @@ import { UsersEditComponent } from './users-edit/users-edit.component';
 import { RolesAndPermissionsComponent } from './roles-and-permissions/roles-and-permissions.component';
 import { SettingsComponent } from './settings/settings.component';
 import { UsersComponent } from './users/users.component';
+import { SideNavComponent } from './side-nav/side-nav.component';
 
 
 @NgModule({
@@ -19,6 +20,7 @@ import { UsersComponent } from './users/users.component';
     RolesAndPermissionsComponent,
     SettingsComponent,
     UsersComponent,
+    SideNavComponent,
 
   ],
   imports: [

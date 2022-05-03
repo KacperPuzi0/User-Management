@@ -14,8 +14,8 @@ h2 {
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-around;
-  align-content: flex-start;
-  align-items: flex-start;
+  align-content: flex-end;
+  align-items: flex-end;
 }
 
 a {
