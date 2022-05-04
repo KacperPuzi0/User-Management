@@ -5,8 +5,25 @@
       <h2>{{ user.name }} {{ user.surname }}</h2>
     </div>
     <div class="buttons">
-      <button type="button" class="btn button" id="delete">DELETE</button>
-      <button type="button" class="btn button" id="block">BLOCK</button>
+      <button type="button" class="delete" (click)="deleteUser()" id="delete">DELETE</button>
+      <button type="button" class="block" id="block" data-bs-toggle="modal" (click)="open()">BLOCK</button>
+      <div class="modal fade" tabindex="-1" #sModal id="sModal">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">Block User</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="close"></button>
+            </div>
+            <div class="modal-body">
+              <p>{{body}}</p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-primary" data-dismiss="modal">No</button>
+              <button type="button" class="btn btn-secondary" (click)="blockUser()">Yes</button>
+            </div>
+          </div>
+        </div>
+      </div>
       <button type="button" class="btn button" id="set">SET PASSWORD</button>
       <button type="button" class="btn button" id="save">SAVE</button>
     </div>
@@ -23,4 +40,7 @@
       </ul>
     </nav>
   </div>
+
 </div>
+
+

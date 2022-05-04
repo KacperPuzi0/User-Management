@@ -18,4 +18,13 @@ export class UserService {
     const user = USERS.find(h => h.id === id)!;
     return of(user);
   }
+  deleteUser(id: number): Observable<User> {
+    const user = USERS.find(h => h.id === id)!;
+    return of(user);
+  }
+
+  blockUser(id: number): Observable<User> {
+    const user = USERS.find(h => h.id === id)!;
+    return of(user);
+  }
 }
