@@ -16,6 +16,7 @@ export class UserService {
     private http: HttpClient,
   ) {}
 
+
   private log(message: string) {
     this.messageService.add(`UserService: ${message}`);
   }

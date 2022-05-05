@@ -2,7 +2,7 @@ import { Component, Input, OnInit, ViewChild } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Location } from '@angular/common';
 import { Modal } from 'bootstrap';
-import { ReactiveFormsModule } from '@angular/forms';
+import { ReactiveFormsModule, FormGroup, FormControl } from '@angular/forms';
 
 import { User } from '../users';
 import { UserService } from '../user.service';
@@ -14,10 +14,20 @@ import { TabRightComponent } from '../tab-right/tab-right.component';
   styleUrls: ['./users-edit.component.css'],
 })
 export class UsersEditComponent implements OnInit {
-
   body: string = 'Are you sure you want to block this user?';
   user: User | undefined;
   sModal: Modal | undefined;
+  userForm = new FormGroup({
+    name: new FormControl(''),
+    surname: new FormControl(''),
+    birthDate: new FormControl(''),
+    citizenship: new FormControl(''),
+    photo: new FormControl(''),
+    instagram: new FormControl(''),
+    facebook: new FormControl(''),
+    twitter: new FormControl(''),
+    email: new FormControl(''),
+  });
 
   constructor(
     private route: ActivatedRoute,
@@ -31,8 +41,8 @@ export class UsersEditComponent implements OnInit {
   }
 
   getUser(): void {
-   const id = Number(this.route.snapshot.paramMap.get('id'));
-   this.userService.getUser(id).subscribe((user) => (this.user = user));
+    const id = Number(this.route.snapshot.paramMap.get('id'));
+    this.userService.getUser(id).subscribe((user) => (this.user = user));
   }
   goBack(): void {
     this.location.back();
@@ -51,13 +61,17 @@ export class UsersEditComponent implements OnInit {
     this.sModal?.toggle();
   }
 
-
-
   deleteUsers(): void {
-    if(this.user){
-      this.userService.deleteUser(this.user.id)
-      .subscribe(() => this.goBack());
+    if (this.user) {
+      this.userService.deleteUser(this.user.id).subscribe(() => this.goBack());
+    }
+  }
+
+  save(): void {
+    if (this.user) {
+      this.userService
+        .updateUser(this.user)
+        .subscribe(() => this.goBack());
     }
   }
 }
-
