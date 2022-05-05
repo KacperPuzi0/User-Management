@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnInit, ViewChild } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Location } from '@angular/common';
 import { Modal } from 'bootstrap';
@@ -7,13 +7,14 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { User } from '../users';
 import { UserService } from '../user.service';
 import * as bootstrap from 'bootstrap';
-
+import { TabRightComponent } from '../tab-right/tab-right.component';
 @Component({
   selector: 'app-users-edit',
   templateUrl: './users-edit.component.html',
   styleUrls: ['./users-edit.component.css'],
 })
 export class UsersEditComponent implements OnInit {
+
   body: string = 'Are you sure you want to block this user?';
   user: User | undefined;
   sModal: Modal | undefined;
@@ -50,12 +51,7 @@ export class UsersEditComponent implements OnInit {
     this.sModal?.toggle();
   }
 
-  save(): void {
-    if(this.user){
-      this.userService.updateUser(this.user)
-      .subscribe(() => this.goBack());
-    }
-  }
+
 
   deleteUsers(): void {
     if(this.user){

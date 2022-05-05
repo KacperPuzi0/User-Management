@@ -7,10 +7,9 @@ import { ActivatedRoute, Router } from '@angular/router';
 @Component({
   selector: 'app-tab-right',
   templateUrl: './tab-right.component.html',
-  styleUrls: ['./tab-right.component.css']
+  styleUrls: ['./tab-right.component.css'],
 })
 export class TabRightComponent implements OnInit {
-
   user: User | undefined;
   userForm = new FormGroup({
     name: new FormControl(''),
@@ -24,20 +23,25 @@ export class TabRightComponent implements OnInit {
     email: new FormControl(''),
   });
 
-    users: User[] = [];
+  users: User[] = [];
 
-
-  constructor(private userService: UserService,
-    private route: ActivatedRoute
-    ) { }
+  constructor(
+    private userService: UserService,
+    private route: ActivatedRoute,
+  ) {}
 
   ngOnInit(): void {
     this.getUser();
   }
 
-    getUser(): void {
+  getUser(): void {
     const id = Number(this.route.snapshot.paramMap.get('id'));
     this.userService.getUser(id).subscribe((user) => (this.user = user));
-    }
+  }
 
+  onSubmit(): void {
+    if (this.user) {
+      this.userService.updateUser(this.user);
+    }
+  }
 }

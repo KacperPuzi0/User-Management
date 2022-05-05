@@ -1,4 +1,4 @@
-<form [formGroup]="userForm" id="userForm" *ngIf="user">
+<form [formGroup]="userForm" id="userForm" *ngIf="user" (ngSubmit)="onSubmit()">
   <label class="text">Personal Data</label>
   <div class="row" id="rows" >
     <div class="form-group col-md-5">

@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { User } from './users';
 import { USERS } from './mock-users';
-import { Observable, of } from 'rxjs';
+import { Observable, of, Subject } from 'rxjs';
 import { MessageService } from './message.service';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { catchError, map, tap } from 'rxjs/operators';
@@ -13,7 +13,7 @@ import { TabRightComponent } from './tab-right/tab-right.component';
 export class UserService {
   constructor(
     private messageService: MessageService,
-    private http: HttpClient
+    private http: HttpClient,
   ) {}
 
   private log(message: string) {
