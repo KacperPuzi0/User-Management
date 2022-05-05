@@ -7,7 +7,6 @@ import { ReactiveFormsModule, FormGroup, FormControl } from '@angular/forms';
 import { User } from '../users';
 import { UserService } from '../user.service';
 import * as bootstrap from 'bootstrap';
-import { TabRightComponent } from '../tab-right/tab-right.component';
 @Component({
   selector: 'app-users-edit',
   templateUrl: './users-edit.component.html',

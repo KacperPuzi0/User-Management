@@ -5,7 +5,7 @@ import { Observable, of, Subject } from 'rxjs';
 import { MessageService } from './message.service';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { catchError, map, tap } from 'rxjs/operators';
-import { TabRightComponent } from './tab-right/tab-right.component';
+
 
 @Injectable({
   providedIn: 'root',

@@ -15,7 +15,6 @@ import { SettingsComponent } from './settings/settings.component';
 import { UsersComponent } from './users/users.component';
 import { SideNavComponent } from './side-nav/side-nav.component';
 import { MessagesComponent } from './messages/messages.component';
-import { TabRightComponent } from './tab-right/tab-right.component';
 
 
 @NgModule({
@@ -28,7 +27,6 @@ import { TabRightComponent } from './tab-right/tab-right.component';
     UsersComponent,
     SideNavComponent,
     MessagesComponent,
-    TabRightComponent,
 
   ],
   imports: [
