@@ -1,7 +1,8 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Location } from '@angular/common';
-import {Modal} from 'bootstrap';
+import { Modal } from 'bootstrap';
+import { ReactiveFormsModule } from '@angular/forms';
 
 import { User } from '../users';
 import { UserService } from '../user.service';
@@ -13,9 +14,9 @@ import * as bootstrap from 'bootstrap';
   styleUrls: ['./users-edit.component.css'],
 })
 export class UsersEditComponent implements OnInit {
-  body:string = "Are you sure you want to block this user?";
+  body: string = 'Are you sure you want to block this user?';
   user: User | undefined;
-  sModal : Modal | undefined;
+  sModal: Modal | undefined;
 
   constructor(
     private route: ActivatedRoute,
@@ -29,23 +30,38 @@ export class UsersEditComponent implements OnInit {
   }
 
   getUser(): void {
-    const id = Number(this.route.snapshot.paramMap.get('id'));
-    this.userService.getUser(id).subscribe((user) => (this.user = user));
+   const id = Number(this.route.snapshot.paramMap.get('id'));
+   this.userService.getUser(id).subscribe((user) => (this.user = user));
   }
   goBack(): void {
     this.location.back();
   }
-  deleteUser() {
-    this.userService.deleteUser(this.user!.id)
-    this.router.navigate(['/userslist']);
+
+  open() {
+    this.sModal = new bootstrap.Modal(
+      document.getElementById('sModal') as HTMLElement,
+      {
+        keyboard: false,
+      }
+    );
+    this.sModal?.show();
   }
-  open(){
-        this.sModal = new bootstrap.Modal(document.getElementById('sModal') as HTMLElement,{
-      keyboard: false,
-  })
-  this.sModal?.show();
- }
-  blockUser(){
-  this.sModal?.toggle();
- }
+  blockUser() {
+    this.sModal?.toggle();
+  }
+
+  save(): void {
+    if(this.user){
+      this.userService.updateUser(this.user)
+      .subscribe(() => this.goBack());
+    }
+  }
+
+  deleteUsers(): void {
+    if(this.user){
+      this.userService.deleteUser(this.user.id)
+      .subscribe(() => this.goBack());
+    }
+  }
 }
+

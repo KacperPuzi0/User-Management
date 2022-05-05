@@ -1,0 +1,13 @@
+.text{
+  font-family: Rubik Regular;
+  font-size: 1.5vw;
+  padding-top: 15px;
+  color:#0d6efd
+}
+#userForm{
+  font-family: Rubik Regular;
+  font-size: 0.8vw;
+}
+.form-group{
+  padding-left: 1.5vw;
+}

@@ -13,6 +13,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  font-family: Rubik Regular;
 }
 .buttons {
   display: flex;
@@ -48,3 +49,4 @@
   border-radius: 4px;
   font-size: 1vw;
 }
+
