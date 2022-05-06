@@ -1,0 +1,25 @@
+
+<div class="col-md-6" *ngIf="user">
+  <h6>User / User Edit</h6>
+  <h2>{{ user.name }} {{ user.surname }}</h2>
+</div>
+
+<div class="container">
+  <div class="row">
+    <ul class="nav nav-tabs" #tabs>
+      <li role="presentation" routerLinkActive="active" *ngIf="user">
+        <a class="nav-link" routerLink="/useredit/{{ user.id }}/messages">Logs</a>
+      </li>
+      <li class="nav-item"*ngIf="user">
+        <a
+          class="nav-link"
+          role="presentation"
+          routerLink="/useredit/{{ user.id }}/rolesandpermissions"
+          routerLinkActive="active"
+          >Permissions</a
+        >
+      </li>
+    </ul>
+    <router-outlet></router-outlet>
+  </div>
+</div>

@@ -1,4 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { UserService } from '../user.service';
+import { User } from '../users';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-roles-and-permissions',
@@ -6,10 +9,19 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./roles-and-permissions.component.css']
 })
 export class RolesAndPermissionsComponent implements OnInit {
-
-  constructor() { }
+  user: User | undefined;
+  constructor(
+    private route: ActivatedRoute,
+    private userService: UserService,
+    private router: Router
+  ) { }
 
   ngOnInit(): void {
+    this.getUser();
   }
+    getUser(): void {
+    const id = Number(this.route.snapshot.paramMap.get('id'));
+    this.userService.getUser(id).subscribe((user) => (this.user = user));
+    }
 
 }

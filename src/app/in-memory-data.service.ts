@@ -19,7 +19,7 @@ export class InMemoryDataService {
         facebook: '@LeaneGraham',
         twitter: '@LeaneGraham',
         instagram: '@LeaneGraham',
-        role: 'Actor',
+        role: 'Performer',
       },
       {
         id: 2,
@@ -32,7 +32,7 @@ export class InMemoryDataService {
         facebook: '@HughJackman',
         twitter: '@HughJackman',
         instagram: '@HughJackman',
-        role: 'Actor',
+        role: 'Performer',
       },
       {
         id: 3,
@@ -42,10 +42,10 @@ export class InMemoryDataService {
         citizenship: 'USA',
         photo: 'assets/images/users/1.jpg',
         email: 'johny@deep.',
-        facebook: '@HughJackman',
-        twitter: '@HughJackman',
-        instagram: '@HughJackman',
-        role: 'Actor',
+        facebook: '@JohnyDeep',
+        twitter: '@JohnyDeep',
+        instagram: '@JohnyDeep',
+        role: 'Performer',
       },
     ];
     return { users };
@@ -54,6 +54,6 @@ export class InMemoryDataService {
   genId(users: User[]): number {
     return users.length > 0 ? Math.max(...users.map((user) => user.id)) + 1 : 1;
   }
-  
+
   constructor() {}
 }

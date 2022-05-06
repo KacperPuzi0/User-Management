@@ -9,5 +9,6 @@ export interface User{
   facebook: string;
   twitter: string;
   instagram: string;
+  role:string;
 
 }

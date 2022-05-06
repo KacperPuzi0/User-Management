@@ -12,6 +12,7 @@ export const USERS: User[] = [
     facebook: '@LeaneGraham',
     twitter: '@LeaneGraham',
     instagram: '@LeaneGraham',
+    role: 'Performer',
   },
   {
     id: 2,
@@ -24,6 +25,7 @@ export const USERS: User[] = [
     facebook: '@HughJackman',
     twitter: '@HughJackman',
     instagram: '@HughJackman',
+    role: 'Performer',
   },
   {
     id: 3,
@@ -36,5 +38,6 @@ export const USERS: User[] = [
     facebook: '@HughJackman',
     twitter: '@HughJackman',
     instagram: '@HughJackman',
+    role: 'Performer',
   },
 ];
