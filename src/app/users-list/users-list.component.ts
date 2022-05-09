@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {USERS} from '../mock-users';
 import { User } from '../users';
 import { UserService } from '../user.service';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-users-list',
@@ -10,21 +11,15 @@ import { UserService } from '../user.service';
 })
 export class UsersListComponent implements OnInit {
   users: User[] = [];
-  selectedUser?: User;
-  constructor(private userService: UserService) { }
+  user: User | undefined;
+  constructor(private userService: UserService, private route: ActivatedRoute, private router: Router) {}
 
   ngOnInit(): void {
     this.getUsers();
-  }
-
-  onSelect(user: User): void {
-    this.selectedUser = user;
   }
 
   getUsers(): void {
     this.userService.getUsers()
       .subscribe(users => this.users = users);
   }
-
-
 }

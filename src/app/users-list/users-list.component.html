@@ -1,9 +1,38 @@
-<h2>My users</h2>
-<ul class="users">
-  <li *ngFor="let user of users">
-    <a routerLink="/useredit/{{ user.id }}">
-      <span class="badge">{{ user.id }}</span
-      >{{ user.name }} {{ user.surname }}
-    </a>
-  </li>
-</ul>
+<div class="container">
+  <div class="row">
+  <h2>My users</h2>
+  <div class="containerTab">
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">Id</th>
+          <th scope="col">Name</th>
+          <th scope="col">Surname</th>
+          <th scope="col">Email</th>
+          <th scope="col">Facebook</th>
+          <th scope="col">Twitter</th>
+          <th scope="col">Role</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let user of users">
+          <td>{{ user.id }}</td>
+          <td>{{ user.name }}</td>
+          <td>{{ user.surname }}</td>
+          <td>{{ user.email }}</td>
+          <td>{{ user.facebook }}</td>
+          <td>{{ user.twitter }}</td>
+          <td>{{ user.role }}</td>
+          <button
+            class="btn edit"
+            id="edit"
+            routerLink="/useredit/{{ user.id }}"
+          >
+            Edit
+          </button>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+</div>

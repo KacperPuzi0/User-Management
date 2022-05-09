@@ -1,25 +1,56 @@
-
 <div class="col-md-6" *ngIf="user">
   <h6>User / User Edit</h6>
   <h2>{{ user.name }} {{ user.surname }}</h2>
 </div>
+ <div class="container">
+    <div class="row">
+      <ul class="nav nav-tabs">
+        <li class="nav-item" role="presentation" [class.active]="viewMode == 'tab1'" rel="tab1" (click)="viewMode ='tab1'">
+          <a class="nav-link" >Logs</a>
+        </li>
+        <li class="nav-item" role="presentation" [class.active]="viewMode == 'tab2'" rel="tab2" (click)="viewMode ='tab2'">
+          <a class="nav-link">Permissions</a>
+        </li>
+      </ul>
+    </div>
+    <div class="tab-slider--container" [ngSwitch]="viewMode">
+      <div id="tab1" class="tab-slider--body" *ngSwitchCase="'tab1'">
+        <app-logs-tab></app-logs-tab>
+      </div>
+      <div id="tab2" class="tab-slider--body" *ngSwitchCase="'tab2'">
+        <app-permissions-tab></app-permissions-tab>
+      </div>
+    </div>
+  </div>
 
-<div class="container">
+
+<!-- <div class="container">
   <div class="row">
     <ul class="nav nav-tabs" #tabs>
-      <li role="presentation" routerLinkActive="active" *ngIf="user">
-        <a class="nav-link" routerLink="/useredit/{{ user.id }}/messages">Logs</a>
-      </li>
-      <li class="nav-item"*ngIf="user">
+      <li class="nav-item active" *ngIf="user">
         <a
           class="nav-link"
-          role="presentation"
-          routerLink="/useredit/{{ user.id }}/rolesandpermissions"
+          routerLink="/useredit/{{ user.id }}/logs"
           routerLinkActive="active"
+          [routerLinkActiveOptions]="{ exact: true }"
+          >Logs</a
+        >
+      </li>
+      <li
+        role="presentation"
+        class="nav-item"
+        routerLinkActive="active"
+        *ngIf="user"
+      >
+        <a
+          routerLinkActive="active"
+          [routerLinkActiveOptions]="{ exact: true }"
+          class="nav-link"
+          routerLink="/useredit/{{ user.id }}/permissions"
           >Permissions</a
         >
       </li>
     </ul>
     <router-outlet></router-outlet>
   </div>
-</div>
+</div> -->

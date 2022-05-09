@@ -6,16 +6,19 @@ import { RolesAndPermissionsComponent } from './roles-and-permissions/roles-and-
 import { SettingsComponent } from './settings/settings.component';
 import { UsersComponent } from './users/users.component';
 import { MessagesComponent } from './messages/messages.component';
+import { LogsTabComponent } from './logs-tab/logs-tab.component';
+import { PermissionsTabComponent } from './permissions-tab/permissions-tab.component';
 const routes: Routes = [
-  {path:'', redirectTo:'/users', pathMatch:'full'},
+  // {path:'', redirectTo:'/users', pathMatch:'full'},
   {path:'userslist', component:UsersListComponent},
   {path:'useredit/:id', component:UsersEditComponent,
   children:[
-    {path:'messages', component:MessagesComponent},
-    {path:'rolesandpermissions', component:RolesAndPermissionsComponent},
+      {path: 'logs', component: LogsTabComponent},
+  {path:'permissions', component:PermissionsTabComponent},
   ]},
   {path:'settings', component:SettingsComponent},
   { path: 'users', component: UsersComponent },
+
 ];
 
 @NgModule({

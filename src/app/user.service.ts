@@ -6,16 +6,14 @@ import { MessageService } from './message.service';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { catchError, map, tap } from 'rxjs/operators';
 
-
 @Injectable({
   providedIn: 'root',
 })
 export class UserService {
   constructor(
     private messageService: MessageService,
-    private http: HttpClient,
+    private http: HttpClient
   ) {}
-
 
   private log(message: string) {
     this.messageService.add(`UserService: ${message}`);
@@ -64,9 +62,8 @@ export class UserService {
 
   deleteUser(id: number): Observable<User> {
     const url = `${this.userUrl}/${id}`;
-
     return this.http.delete<User>(url, this.httpOptions).pipe(
-      tap(_ => this.log(`deleted user id=${id}`)),
+      tap((_) => this.log(`deleted user id=${id}`)),
       catchError(this.handleError<User>('deleteUser'))
     );
   }
