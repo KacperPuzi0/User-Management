@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { UsersEditComponent } from './users-edit/users-edit.component';
-import {UsersListComponent} from './users-list/users-list.component';
+import { UsersListComponent } from './users-list/users-list.component';
 import { RolesAndPermissionsComponent } from './roles-and-permissions/roles-and-permissions.component';
 import { SettingsComponent } from './settings/settings.component';
 import { UsersComponent } from './users/users.component';
@@ -10,19 +10,15 @@ import { LogsTabComponent } from './logs-tab/logs-tab.component';
 import { PermissionsTabComponent } from './permissions-tab/permissions-tab.component';
 const routes: Routes = [
   // {path:'', redirectTo:'/users', pathMatch:'full'},
-  {path:'userslist', component:UsersListComponent},
-  {path:'useredit/:id', component:UsersEditComponent,
-  children:[
-      {path: 'logs', component: LogsTabComponent},
-  {path:'permissions', component:PermissionsTabComponent},
-  ]},
-  {path:'settings', component:SettingsComponent},
+  { path: 'userslist', component: UsersListComponent },
+  { path: 'useredit/:id', component: UsersEditComponent },
+  { path: 'settings', component: SettingsComponent },
   { path: 'users', component: UsersComponent },
-
+  {path:'rolesandpermissions', component:RolesAndPermissionsComponent},
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}
