@@ -2,7 +2,11 @@ body {
   overflow-x: hidden;
   fill: #ffffff;
   stroke-width: 1;
-  width: 100%;
+  width: 240px;
+}
+
+#dflex{
+  width: 240px;
 }
 
 #sidebar-wrapper {
@@ -26,6 +30,7 @@ body {
 #page-content-wrapper {
   /* min-width: 100vw; */
   width: 100%;
+
 }
 
 #wrapper.toggled #sidebar-wrapper {
@@ -57,19 +62,19 @@ body {
   }
 }
 .day {
-  font-family: Rubik;
+  font-family: 'Rubik', sans-serif;
   font-size: 14px;
   color: #9b9fa8;
   text-decoration: rgb(155, 159, 168);
 }
 .month {
-  font-family: Rubik;
+  font-family: 'Rubik', sans-serif;
   font-size: 26px;
   color: #252629;
   text-decoration: rgb(37, 38, 41);
 }
 .year {
-  font-family: Rubik;
+  font-family: 'Rubik', sans-serif;
   font-size: 14px;
   color: #9b9fa8;
   text-decoration: rgb(155, 159, 168);
@@ -79,7 +84,7 @@ body {
 }
 
 .users-menu {
-  font-family: Rubik;
+  font-family: 'Rubik', sans-serif;
   font-size: 12px;
   color: #5e92fc;
   text-decoration: rgb(94, 146, 252);
@@ -87,7 +92,7 @@ body {
 }
 
 .user-label {
-  font-family: Rubik;
+  font-family: 'Rubik', sans-serif;
 }
 
 

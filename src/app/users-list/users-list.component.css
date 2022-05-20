@@ -51,7 +51,9 @@
   margin-right: .8em;
   border-radius: 4px 0 0 4px;
 } */
-
+.container{
+  font-family: 'Rubik', sans-serif;
+}
 #edit {
   background-color: blue;
   color: #fff;
@@ -60,11 +62,9 @@
 }
 .table {
   width: 100%;
-  font-family: Rubik Regular;
   font-size: 1.5vw;
 }
 h2 {
-  font-family: Rubik Regular;
   font-size: 2vw;
   text-align: center;
   padding-top: 3vw;

@@ -19,6 +19,7 @@ import { LeftTabComponent } from './left-tab/left-tab.component';
 import { RightTabComponent } from './right-tab/right-tab.component';
 import { LogsTabComponent } from './logs-tab/logs-tab.component';
 import { PermissionsTabComponent } from './permissions-tab/permissions-tab.component';
+import { NavbarComponent } from './navbar/navbar.component';
 
 
 @NgModule({
@@ -35,6 +36,7 @@ import { PermissionsTabComponent } from './permissions-tab/permissions-tab.compo
     RightTabComponent,
     LogsTabComponent,
     PermissionsTabComponent,
+    NavbarComponent,
 
   ],
   imports: [

@@ -1,11 +1,11 @@
 #role{
-  font-family: Rubik Regular;
+  font-family: 'Rubik', sans-serif;
   font-size: 1.5vw;
   padding-top: 15px;
   color: var(--bs-blue)
 }
 #asignRole{
-  font-family: Rubik Regular;
+  font-family: 'Rubik', sans-serif;
   font-size: 0.8vw;
   padding-top: 15px;
 }

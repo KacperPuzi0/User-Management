@@ -1,30 +1,43 @@
 <div class="container">
   <div class="row">
-    <div class="col-md-6" *ngIf="user">Role: {{ user.role }}</div>
+    <div class="col-md-6" id="role" *ngIf="user">Role: {{ user.role }}</div>
 
     <div class="col-md-6" *ngIf="user">
       <h6>Asign Role</h6>
+      <form [formGroup]="form">
+        <select class="form-select" formControlName="roles">
+          <option *ngFor="let role of roles" [ngValue]="role">
+            {{ role.name }}
+          </option>
+        </select>
+      </form>
+
       <div class="col-sm"></div>
     </div>
     <hr />
     <table class="table">
-  <thead>
-    <tr class="col">
-      <th scope="col" class="col-md-6">Object</th>
-      <th scope="col" class="col-md-6">Action</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr *ngFor="let object of objects">
-      <td class="col-md-6">{{ object.name }}</td>
-      <td class="col-md-6">
-        <button type="button" class="btn btn">Create</button>
-        <button type="button" class="btn btn">Read</button>
-        <button type="button" class="btn btn">Update</button>
-        <button type="button" class="btn btn">Delete</button>
-      </td>
-    </tr>
-  </tbody>
-</table>
+      <thead>
+        <tr class="col">
+          <th scope="col" class="col-md-6">Object</th>
+          <th scope="col" class="col-md-6">Action</th>
+        </tr>
+      </thead>
+      <tbody [formGroup]="formArray">
+        <td class="col-md-6">Movie</td>
+        <tr
+          formArrayName="objects"
+          *ngFor="let obj of objects.controls; let i = index"
+          [formGroupName]="i"
+        >
+          <td class="col-md-6">{{ obj.value.name }}</td>
+          <td class="col-md-6">
+            <button type="button" class="btn btn">Create</button>
+            <button type="button" class="btn btn">Read</button>
+            <button type="button" class="btn btn">Update</button>
+            <button type="button" class="btn btn">Delete</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
   </div>
 </div>

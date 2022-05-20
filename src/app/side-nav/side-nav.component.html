@@ -1,5 +1,5 @@
 <div id="page-content-wrapper">
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <nav class="navbar navbar-expand-lg">
     <div class="container-fluid">
       <button class="btn btn" (click)="toggle()">
         <svg
@@ -21,9 +21,9 @@
   </nav>
 </div>
 
-<div class="d-flex">
+<div class="d-flex" id="dflex">
   <div
-    class="bg-light border-right"
+    class="border-right"
     id="sidebar-wrapper"
     [ngClass]="status ? 'hide' : 'show'"
   >
@@ -82,5 +82,4 @@
       </ul>
     </div>
   </div>
-  <router-outlet></router-outlet>
 </div>

@@ -6,14 +6,13 @@
 }
 
 #container {
-  width: 80vw;
-  height: 739.2px;
+  font-family: 'Rubik', sans-serif;
 }
 .name {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  font-family: Rubik Regular;
+  font-family: 'Rubik', sans-serif;
 }
 .buttons {
   display: flex;
@@ -21,6 +20,7 @@
   gap: 1.4vw;
   padding-top: 1vw;
   padding-bottom: 2.5vw;
+  font-family: 'Rubik', sans-serif;
 }
 
 #delete {
@@ -52,15 +52,18 @@
   font-size: 1vw;
 }
 .text{
-  font-family: Rubik Regular;
+  font-family: 'Rubik', sans-serif;
   font-size: 1.5vw;
   padding-top: 15px;
   color: var(--bs-blue)
 }
 #userForm{
-  font-family: Rubik Regular;
+  font-family: 'Rubik', sans-serif;
   font-size: 0.8vw;
 }
 .form-group{
   padding-left: 1.5vw;
+}
+#nav{
+  font-family: 'Rubik', sans-serif;
 }
