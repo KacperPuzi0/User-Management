@@ -1,8 +1,11 @@
 #blocks{
     display: flex;
     flex-direction: row;
+    font-family: 'Rubik', sans-serif;
+    color: gray;
 }
 #active{
   display: flex;
   text-align: center;
+
 }

@@ -5,8 +5,12 @@
     <div class="col-md-6" *ngIf="user">
       <h6>Asign Role</h6>
       <form [formGroup]="form">
-        <select class="form-select" formControlName="roles">
-          <option *ngFor="let role of roles" [ngValue]="role">
+        <select
+          class="form-select"
+          formControlName="role"
+          [(ngModel)]="user.role"
+        >
+          <option *ngFor="let role of roles">
             {{ role.name }}
           </option>
         </select>
@@ -23,7 +27,7 @@
         </tr>
       </thead>
       <tbody [formGroup]="formArray">
-        <td class="col-md-6">Movie</td>
+        <td class="col-md-6" id="obj">Movie</td>
         <tr
           formArrayName="objects"
           *ngFor="let obj of objects.controls; let i = index"

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Location } from '@angular/common';
 import { User } from '../users';
@@ -14,7 +14,7 @@ import * as bootstrap from 'bootstrap';
 })
 export class RightTabComponent implements OnInit {
   user: User | undefined;
-  users:User[] = [];
+  users: User[] = [];
   sModal: Modal | undefined;
   body: string = 'Are you sure you want to block this user?';
 
@@ -67,7 +67,7 @@ export class RightTabComponent implements OnInit {
 
   deleteUsers(): void {
     if (this.user) {
-      this.userService.deleteUser(this.user.id).subscribe( () => this.goBack());
+      this.userService.deleteUser(this.user.id).subscribe(() => this.goBack());
     }
   }
 }

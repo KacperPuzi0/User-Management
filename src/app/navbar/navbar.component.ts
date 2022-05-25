@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { RightTabComponent } from '../right-tab/right-tab.component';
 
 @Component({
   selector: 'app-navbar',
@@ -11,4 +12,5 @@ export class NavbarComponent implements OnInit {
 
   ngOnInit(): void {
   }
+
 }
