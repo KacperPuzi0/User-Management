@@ -70,4 +70,5 @@ export class RightTabComponent implements OnInit {
       this.userService.deleteUser(this.user.id).subscribe( () => this.goBack());
     }
   }
+  viewMode = 'tab1';
 }
