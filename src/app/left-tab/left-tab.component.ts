@@ -28,5 +28,5 @@ export class LeftTabComponent implements OnInit {
     this.userService.getUsers().subscribe((users) => (this.users = users));
   }
 
-  viewMode = 'tab1';
+  viewMode = 'tab2';
 }
