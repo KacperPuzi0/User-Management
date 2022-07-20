@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import {USERS} from '../mock-users';
 import { User } from '../users';
 import { UserService } from '../user.service';
 import { ActivatedRoute, Router } from '@angular/router';

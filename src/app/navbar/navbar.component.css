@@ -2,7 +2,7 @@
     display: flex;
     flex-direction: row;
     font-family: 'Rubik', sans-serif;
-    color: gray;
+    color: var(--bs-light-gray);
 }
 #active{
   display: flex;

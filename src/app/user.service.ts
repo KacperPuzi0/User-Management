@@ -1,6 +1,5 @@
 import { Injectable } from '@angular/core';
 import { User } from './users';
-import { USERS } from './mock-users';
 import { Observable, of, Subject } from 'rxjs';
 import { MessageService } from './message.service';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
@@ -49,9 +48,13 @@ export class UserService {
   }
 
   blockUser(id: number): Observable<User> {
-    const user = USERS.find((h) => h.id === id)!;
-    return of(user);
+    const url = `${this.userUrl}/${id}/block`;
+    return this.http.put<User>(url, this.httpOptions).pipe(
+      tap((_) => this.log(`blocked user id=${id}`)),
+      catchError(this.handleError<User>('blockUser'))
+    );
   }
+
 
   updateUser(user: User): Observable<any> {
     return this.http.put(this.userUrl, user, this.httpOptions).pipe(

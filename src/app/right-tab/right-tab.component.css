@@ -2,17 +2,23 @@
   --bs-red: #dc3545;
   --bs-gray: #6c757d;
   --bs-yellow: #ffc107;
-   --bs-blue: #0d6efd;
+  --bs-blue: #0d6efd;
+  --bs-white: #fff;
+  --bs-gray:#42545C;
+  --bs-dark-gray:#333;
+  --bs-light-gray:gray;
+  --bs-dark-white:#dbdde0;
+  --bs-light-dark:#252629;
 }
 
 #container {
-  font-family: 'Rubik', sans-serif;
+  font-family: "Rubik", sans-serif;
 }
 .name {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  font-family: 'Rubik', sans-serif;
+  font-family: "Rubik", sans-serif;
 }
 .buttons {
   display: flex;
@@ -20,50 +26,50 @@
   gap: 1.4vw;
   padding-top: 1vw;
   padding-bottom: 2.5vw;
-  font-family: 'Rubik', sans-serif;
+  font-family: "Rubik", sans-serif;
 }
 
 #delete {
   background-color: var(--bs-red);
-  color: #fff;
+  color: var(--bs-white);
   border: none;
   border-radius: 4px;
   font-size: 1vw;
 }
 #block {
   background-color: var(--bs-gray);
-  color: #fff;
+  color: var(--bs-white);
   border: none;
   border-radius: 4px;
   font-size: 1vw;
 }
 #set {
   background-color: var(--bs-yellow);
-  color: #fff;
+  color: var(--bs-white);
   border: none;
   border-radius: 4px;
   font-size: 1vw;
 }
 #save {
   background-color: var(--bs-blue);
-  color: #fff;
+  color: var(--bs-white);
   border: none;
   border-radius: 4px;
   font-size: 1vw;
 }
-.text{
-  font-family: 'Rubik', sans-serif;
+.text {
+  font-family: "Rubik", sans-serif;
   font-size: 1.5vw;
   padding-top: 15px;
-  color: var(--bs-blue)
+  color: var(--bs-blue);
 }
-#userForm{
-  font-family: 'Rubik', sans-serif;
+#userForm {
+  font-family: "Rubik", sans-serif;
   font-size: 0.8vw;
 }
-.form-group{
+.form-group {
   padding-left: 1.5vw;
 }
-#nav{
-  font-family: 'Rubik', sans-serif;
+#nav {
+  font-family: "Rubik", sans-serif;
 }

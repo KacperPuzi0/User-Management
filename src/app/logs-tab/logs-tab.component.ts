@@ -12,8 +12,6 @@ export class LogsTabComponent implements OnInit {
   constructor(private userService:UserService) {
     this.userService = userService;
    }
-
   ngOnInit(): void {
   }
-
 }

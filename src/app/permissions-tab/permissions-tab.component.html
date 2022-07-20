@@ -1,6 +1,6 @@
 <div class="container">
   <div class="row">
-    <div class="col-md-6" id="role" *ngIf="user">Role: {{ user.role }}</div>
+    <div class="col-md-6 role" *ngIf="user">Role: {{ user.role }}</div>
 
     <div class="col-md-6" *ngIf="user">
       <h6>Asign Role</h6>
@@ -27,7 +27,7 @@
         </tr>
       </thead>
       <tbody [formGroup]="formArray">
-        <td class="col-md-6" id="obj">Movie</td>
+        <td class="col-md-6 obj">Movie</td>
         <tr
           formArrayName="objects"
           *ngFor="let obj of objects.controls; let i = index"

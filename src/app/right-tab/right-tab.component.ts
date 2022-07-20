@@ -1,6 +1,5 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { Location } from '@angular/common';
 import { User } from '../users';
 import { UserService } from '../user.service';
 import { FormControl, FormGroup } from '@angular/forms';
@@ -34,7 +33,6 @@ export class RightTabComponent implements OnInit {
   constructor(
     private route: ActivatedRoute,
     private userService: UserService,
-    private location: Location
   ) {}
 
   ngOnInit(): void {
@@ -44,12 +42,10 @@ export class RightTabComponent implements OnInit {
     const id = Number(this.route.snapshot.paramMap.get('id'));
     this.userService.getUser(id).subscribe((user) => (this.user = user));
   }
-  goBack(): void {
-    this.location.back();
-  }
+
   save(): void {
     if (this.user) {
-      this.userService.updateUser(this.user).subscribe(() => this.goBack());
+      this.userService.updateUser(this.user).subscribe();
     }
   }
   open() {
@@ -67,7 +63,7 @@ export class RightTabComponent implements OnInit {
 
   deleteUsers(): void {
     if (this.user) {
-      this.userService.deleteUser(this.user.id).subscribe(() => this.goBack());
+      this.userService.deleteUser(this.user.id).subscribe();
     }
   }
   viewMode = 'tab1';
