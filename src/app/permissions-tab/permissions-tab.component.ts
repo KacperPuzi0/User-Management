@@ -48,5 +48,7 @@ export class PermissionsTabComponent implements OnInit {
   form = new FormGroup({
     role: new FormControl(''),
   });
-
+ click(obj: { active: boolean; }){
+  obj.active = !obj.active;
+ }
 }
