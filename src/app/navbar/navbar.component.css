@@ -1,11 +1,65 @@
-#blocks{
-    display: flex;
-    flex-direction: row;
-    font-family: 'Rubik', sans-serif;
-    color: var(--bs-light-gray);
-}
-#active{
+.blocks {
   display: flex;
+  flex-direction: row;
+  height: 60px;
+}
+.active {
+  width: 100px;
+  height: 13px;
+  font-family: Rubik;
+  font-size: 11px;
+  color: #9b9fa8;
+  text-decoration: rgb(155, 159, 168);
+  text-transform: uppercase;
   text-align: center;
+}
+.blocked {
+  width: 100px;
+  height: 13px;
+  font-family: Rubik;
+  font-size: 11px;
+  color: #9b9fa8;
+  text-decoration: rgb(155, 159, 168);
+  text-transform: uppercase;
+  text-align: center;
+}
 
+.confirmed {
+  width: 100px;
+  height: 13px;
+  font-family: Rubik;
+  font-size: 11px;
+  color: #9b9fa8;
+  text-decoration: rgb(155, 159, 168);
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.counter {
+  height: 17px;
+  font-family: Rubik;
+  font-size: 14px;
+  color: #252629;
+  text-decoration: rgb(37, 38, 41);
+  text-align: center;
+  padding-bottom: 20px;
+  font-weight: bold;
+}
+.d-flex {
+  display: flex;
+  justify-content: space-between;
+}
+.adminName {
+  width: 69px;
+  height: 14px;
+  font-family: Rubik;
+  font-size: 12px;
+  color: #6a6d75;
+  text-decoration: rgb(106, 109, 117);
+}
+.notification {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+  align-items: baseline;
 }

@@ -12,5 +12,5 @@ export class NavbarComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
+ counter = 0;
 }

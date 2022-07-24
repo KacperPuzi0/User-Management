@@ -1,12 +1,11 @@
-
 body {
   overflow-x: hidden;
-  fill: #ffffff;
+  fill: #585151;
   stroke-width: 1;
   width: 240px;
 }
 
-#dflex{
+#dflex {
   width: 240px;
 }
 
@@ -31,7 +30,6 @@ body {
 #page-content-wrapper {
   /* min-width: 100vw; */
   width: 100%;
-
 }
 
 #wrapper.toggled #sidebar-wrapper {
@@ -63,37 +61,54 @@ body {
   }
 }
 .day {
-  font-family: 'Rubik', sans-serif;
+  width: 57px;
+  height: 15px;
+  font-family: Rubik;
   font-size: 14px;
+  color: #9b9fa8;
+  text-decoration: rgb(155, 159, 168);
   color: var(--bs-light-gray);
   text-decoration: var(--bs-light-gray);
 }
 .month {
-  font-family: 'Rubik', sans-serif;
+  width: 156px;
+  height: 26px;
+  font-family: Rubik;
   font-size: 26px;
   color: var(--bs-light-dark);
   text-decoration: var(--bs-light-dark);
 }
 .year {
-  font-family: 'Rubik', sans-serif;
+  width: 35px;
+  height: 17px;
+  font-family: Rubik;
   font-size: 14px;
   color: var(--bs-light-gray);
   text-decoration: var(--bs-light-gray);
 }
 .date {
-  text-align: center;
+  text-align: left;
+  margin-left: 30px;
 }
 
 .users-menu {
-  font-family: 'Rubik', sans-serif;
+  font-family: "Rubik", sans-serif;
   font-size: 12px;
   color: var(--bs-blue);
-  text-decoration: var(--bs-blue);
+  text-decoration: none;
   background-color: var(--bs-dark-white);
+  margin-left: 45px;
+  list-style: none;
+  padding: 0;
 }
 
-.user-label {
-  font-family: 'Rubik', sans-serif;
+.nav-item {
+  font-family: "Rubik", sans-serif;
+  text-decoration: none;
+  font-size: 12px;
+  margin-left: 30px;
 }
 
-
+.icon {
+  margin-right: 10px;
+}

@@ -67,4 +67,6 @@ export class RightTabComponent implements OnInit {
     }
   }
   viewMode = 'tab1';
+
+
 }

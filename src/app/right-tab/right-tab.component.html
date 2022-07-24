@@ -1,7 +1,5 @@
 <div class="buttons">
-  <button type="button" class="delete" id="delete" (click)="deleteUsers()">
-    DELETE
-  </button>
+  <button type="button" class="delete" (click)="deleteUsers()">DELETE</button>
   <button
     type="button"
     class="block"
@@ -38,10 +36,8 @@
     </div>
   </div>
 
-  <button type="button" class="btn button" id="set">SET PASSWORD</button>
-  <button type="button" class="btn save" id="save" (click)="save()">
-    SAVE
-  </button>
+  <button type="button" class="btn set">SET PASSWORD</button>
+  <button type="button" class="btn save" (click)="save()">SAVE</button>
 </div>
 
 <div class="container">
@@ -87,6 +83,20 @@
               [(ngModel)]="user.name"
             />
           </div>
+          <div class="form-group col-md-5 photo">
+            <!-- <label for="photo"></label> -->
+            <img src="assets/Combined Shape.svg" />
+            <!-- <input -->
+            <!-- class="form-control" -->
+            <!-- id="photo" -->
+            <!-- formControlName="photo" -->
+            <!-- [(ngModel)]="user.photo" -->
+            <!-- /> -->
+            <div class="p-2 bd-highlight upload">Upload Photo</div>
+            <div class="p-2 bd-highlight dragdrop">
+              Drag and Drop photo or select from files
+            </div>
+          </div>
           <div class="form-group col-md-5">
             <label for="lastName">Last Name</label>
             <input
@@ -95,16 +105,6 @@
               id="surname"
               formControlName="surname"
               [(ngModel)]="user.surname"
-            />
-          </div>
-          <div class="form-group col-md-5">
-            <label for="birthDate">BirthDate</label>
-            <input
-              type="text"
-              class="form-control"
-              id="birthDate"
-              formControlName="birthDate"
-              [(ngModel)]="user.birthDate"
             />
           </div>
           <div class="form-group col-md-5">
@@ -118,15 +118,17 @@
             />
           </div>
           <div class="form-group col-md-5">
-            <label for="photo">Photo</label>
+            <label for="birthDate">BirthDate</label>
             <input
               type="text"
               class="form-control"
-              id="photo"
-              formControlName="photo"
-              [(ngModel)]="user.photo"
+              id="birthDate"
+              formControlName="birthDate"
+              [(ngModel)]="user.birthDate"
             />
           </div>
+
+          <hr class="line" />
           <label class="text">Contact Information</label>
           <div class="form-group col-md-5">
             <label for="instagram">Instagram</label>

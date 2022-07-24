@@ -1,9 +1,26 @@
 <nav class="navbar-collapse">
-  <div class="container-fluid" id="blocks">
+  <div class="d-flex">
     <div class="d-flex flex-row bd-highlight mb-3">
-      <div class="p-2 bd-highlight" id="active">Active</div>
-      <div class="p-2 bd-highlight" id="blocked">Blocked</div>
-      <div class="p-2 bd-highlight" id="confirmed">Confirmed</div>
+      <div class="p-2 bd-highlight active">
+        Active <br />
+        <div class="counter">{{ counter }}</div>
+      </div>
+      <div class="p-2 bd-highlight blocked">
+        Blocked <br />
+        <div class="counter">{{ counter }}</div>
+      </div>
+      <div class="p-2 bd-highlight confirmed">
+        Confirmed <br />
+        <div class="counter">{{ counter }}</div>
+      </div>
+    </div>
+    <div class="d-flex flex-row bd-highlight notification">
+      <div class="p-2 bd-highlight">
+        <img src="assets/Icons_notification_ico.svg" />
+      </div>
+      <div class="p-2 bd-highlight"><img src="/assets/Avatar.png"></div>
+      <div class="p-2 bd-highlight adminName">WarsztatA12</div>
+      <div class="p-2 bd-highlight"><img src="/assets/Icon_Form_Arrow_down_ico.svg"></div>
     </div>
   </div>
 </nav>
