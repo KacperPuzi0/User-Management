@@ -1,11 +1,46 @@
-.role{
-  font-size: 3vh;
+.roles {
+  font-size: 18px;
+  color: #325395;
+  text-decoration: rgb(50, 83, 149);
+  font-weight: bold;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.obj {
   padding-top: 15px;
   padding-bottom: 15px;
-  color: var(--bs-blue);
+  font-size: 13px;
+  font-weight: 600;
+  color: #6a6d75;
+  text-decoration: rgb(106, 109, 117);
 }
-.obj{
-  padding-top: 15px;
-  padding-bottom: 15px;
+h6 {
+  font-size: 11px;
+  color: #252629;
+  text-decoration: rgb(37, 38, 41);
+  margin-top: 5px;
 }
-
+select {
+  font-size: 12px;
+  font-weight: 500;
+  color: #252629;
+  text-decoration: rgb(37, 38, 41);
+  margin-bottom: 12px;
+}
+th {
+  font-size: 12px;
+  color: #252629;
+  text-decoration: rgb(37, 38, 41);
+  padding-top: 0;
+}
+.names {
+  font-size: 13px;
+  color: #252629;
+  text-decoration: rgb(37, 38, 41);
+}
+.btn {
+  font-size: 13px;
+  color: #252629;
+  text-decoration: rgb(37, 38, 41);
+}

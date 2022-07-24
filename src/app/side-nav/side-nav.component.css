@@ -1,10 +1,23 @@
+:root {
+  --bs-red: #dc3545;
+  --bs-gray: #6c757d;
+  --bs-yellow: #ffc107;
+  --bs-blue: #0d6efd;
+  --bs-white: #fff;
+  --bs-gray: #42545c;
+  --bs-dark-gray: #333;
+  --bs-light-gray: gray;
+  --bs-dark-white: #dbdde0;
+  --bs-light-dark: #252629;
+  --bs-dark-blue: #325395;
+  --bs-black: #000;
+}
 body {
   overflow-x: hidden;
   fill: #585151;
   stroke-width: 1;
   width: 240px;
 }
-
 #dflex {
   width: 240px;
 }
@@ -65,10 +78,7 @@ body {
   height: 15px;
   font-family: Rubik;
   font-size: 14px;
-  color: #9b9fa8;
-  text-decoration: rgb(155, 159, 168);
-  color: var(--bs-light-gray);
-  text-decoration: var(--bs-light-gray);
+  color: var(--bs-gray);
 }
 .month {
   width: 156px;
@@ -83,8 +93,7 @@ body {
   height: 17px;
   font-family: Rubik;
   font-size: 14px;
-  color: var(--bs-light-gray);
-  text-decoration: var(--bs-light-gray);
+  color: var(--bs-gray);
 }
 .date {
   text-align: left;

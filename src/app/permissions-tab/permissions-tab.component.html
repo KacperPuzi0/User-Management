@@ -1,10 +1,10 @@
 <div class="container">
   <div class="row">
-    <div class="col-md-6 role" *ngIf="user">Role: {{ user.role }}</div>
+    <div class="col-md-6 roles" *ngIf="user">Role: {{ user.role }}</div>
 
     <div class="col-md-6" *ngIf="user">
       <h6>Asign Role</h6>
-      <form [formGroup]="form">
+      <form [formGroup]="form" >
         <select
           class="form-select"
           formControlName="role"
@@ -33,7 +33,7 @@
           *ngFor="let obj of objects.controls; let i = index"
           [formGroupName]="i"
         >
-          <td class="col-md-6">{{ obj.value.name }}</td>
+          <td class="col-md-6 names">{{ obj.value.name }}</td>
           <td class="col-md-6">
             <button type="button" class="btn btn">Create</button>
             <button type="button" class="btn btn">Read</button>
