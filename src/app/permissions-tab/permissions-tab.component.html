@@ -4,7 +4,7 @@
 
     <div class="col-md-6" *ngIf="user">
       <h6>Asign Role</h6>
-      <form [formGroup]="form" >
+      <form [formGroup]="form">
         <select
           class="form-select"
           formControlName="role"
@@ -35,10 +35,10 @@
         >
           <td class="col-md-6 names">{{ obj.value.name }}</td>
           <td class="col-md-6">
-            <button type="button" class="btn btn" >Create</button>
-            <button type="button" class="btn btn">Read</button>
-            <button type="button" class="btn btn">Update</button>
-            <button type="button" class="btn btn">Delete</button>
+            <button type="button" class="btn btn green">Create</button>
+            <button type="button" class="btn btn Read">Read</button>
+            <button type="button" class="btn btn green">Update</button>
+            <button type="button" class="btn btn green">Delete</button>
           </td>
         </tr>
       </tbody>

@@ -2,7 +2,7 @@ import { Component, Input, OnInit } from '@angular/core';
 import { UserService } from '../user.service';
 import { User } from '../users';
 import { ActivatedRoute, Router } from '@angular/router';
-import { FormArray, FormBuilder, FormControl, FormGroup } from '@angular/forms';
+import { FormArray, FormBuilder, FormControl, FormGroup, SelectControlValueAccessor } from '@angular/forms';
 import { Role } from '../roles';
 import { ROLES } from '../mock-roles';
 import { ColdObservable } from 'rxjs/internal/testing/ColdObservable';
@@ -33,13 +33,14 @@ export class PermissionsTabComponent implements OnInit {
 
     this.formArray = this.fb.group({
       objects: this.fb.array([
-        this.fb.control({ name: 'Script' }),
-        this.fb.control({ name: 'Props' }),
-        this.fb.control({ name: 'Scenes' }),
-        this.fb.control({ name: 'Money' }),
-        this.fb.control({ name: 'Stunt' }),
+        this.fb.control({active:false, name: 'Script' }),
+        this.fb.control({active:false, name: 'Props' }),
+        this.fb.control({active:false, name: 'Scenes' }),
+        this.fb.control({active:false, name: 'Money' }),
+        this.fb.control({active:false, name: 'Stunt' }),
       ]),
     });
+
   }
   getUser(): void {
     const id = Number(this.route.snapshot.paramMap.get('id'));
@@ -48,7 +49,12 @@ export class PermissionsTabComponent implements OnInit {
   form = new FormGroup({
     role: new FormControl(''),
   });
- click(obj: { active: boolean; }){
-  obj.active = !obj.active;
- }
+
+  buttons = new FormGroup({
+    add: new FormControl('active:false'),
+    remove: new FormControl('active:false'),
+    update: new FormControl('active:false'),
+    set: new FormControl('acxive:false'),
+  });
+  click= [false,false,false,false,false];
 }
