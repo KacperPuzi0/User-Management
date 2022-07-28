@@ -1,9 +1,9 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { UserService } from '../user.service';
-import { User } from '../users';
+import { UserService } from '../services/user.service';
+import { User } from '../interfaces/users';
 import { ActivatedRoute, Router } from '@angular/router';
 import { FormArray, FormBuilder, FormControl, FormGroup, SelectControlValueAccessor } from '@angular/forms';
-import { Role } from '../roles';
+import { Role } from '../interfaces/roles';
 import { ROLES } from '../mock-roles';
 import { ColdObservable } from 'rxjs/internal/testing/ColdObservable';
 

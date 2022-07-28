@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { User } from './users';
+import { User } from '../interfaces/users';
 import { Observable, of, Subject } from 'rxjs';
 import { MessageService } from './message.service';
 import { HttpClient, HttpHeaders } from '@angular/common/http';

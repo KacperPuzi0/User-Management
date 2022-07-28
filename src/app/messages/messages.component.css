@@ -1,26 +1,14 @@
 h2 {
-  color: var(--bs-white);
+  color: #5e92fc;
   font-family: 'Rubik', sans-serif;
+  font-size: 20px;
   font-weight: lighter;
   padding-top: 15px;
   padding-left: 5px;
 }
-
-.clear {
-  color: var(--bs-dark-gray);
-  background-color: var(--bs-white);
-  margin-bottom: 12px;
-  padding: 1rem;
-  border-radius: 4px;
-  font-size: 1rem;
-}
-.clear:hover {
-  color: var(--bs-white);
-  background-color: var(--bs-gray);
-}
 button{
-  background-color: var(--bs-blue);
-  color: var(--bs-white);
+  background-color: #5e92fc;
+  color: #ffffff;
   border: none;
   border-radius: 4px;
   font-size: 1vw;

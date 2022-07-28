@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Location } from '@angular/common';
-import { User } from '../users';
-import { UserService } from '../user.service';
+import { User } from '../interfaces/users';
+import { UserService } from '../services/user.service';
 
 @Component({
   selector: 'app-left-tab',

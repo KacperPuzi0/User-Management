@@ -1,7 +1,7 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { User } from '../users';
-import { UserService } from '../user.service';
+import { User } from '../interfaces/users';
+import { UserService } from '../services/user.service';
 import { FormControl, FormGroup } from '@angular/forms';
 import { Modal } from 'bootstrap';
 import * as bootstrap from 'bootstrap';

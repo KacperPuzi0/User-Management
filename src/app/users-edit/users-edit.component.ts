@@ -2,8 +2,8 @@ import { Component, Input, OnInit, ViewChild } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Location } from '@angular/common';
 
-import { User } from '../users';
-import { UserService } from '../user.service';
+import { User } from '../interfaces/users';
+import { UserService } from '../services/user.service';
 import { Modal } from 'bootstrap';
 import * as bootstrap from 'bootstrap';
 @Component({

@@ -4,22 +4,14 @@
   --bs-yellow: #ffc107;
   --bs-blue: #0d6efd;
   --bs-white: #fff;
-  --bs-gray: #42545c;
-  --bs-dark-gray: #333;
-  --bs-light-gray: gray;
-  --bs-dark-white: #dbdde0;
-  --bs-light-dark: #252629;
-  --bs-dark-blue: #325395;
-  --bs-black: #000;
 }
 
-.container{
+.container {
   font-family: "Rubik", sans-serif;
-   border-top: 1px solid #e6e6e6;
+  border-top: 1px solid #e6e6e6;
   border-bottom: 1px solid #e6e6e6;
   border-left: 1px solid #e6e6e6;
   border-right: 1px solid #e6e6e6;
-
 }
 .name {
   display: flex;
@@ -80,7 +72,6 @@
   height: 16px;
   font-size: 16px;
   color: #325395;
-  text-decoration: rgb(50, 83, 149);
   margin-bottom: 18px;
   margin-top: 28px;
   font-weight: bold;
@@ -89,7 +80,6 @@
   height: 13px;
   font-size: 11px;
   color: #252629;
-  text-decoration: rgb(37, 38, 41);
 }
 .form-group {
   padding-left: 1.5vw;
@@ -108,19 +98,16 @@
   border-color: #dbdde0;
   padding-block: 1.5vw;
 }
-img{
+img {
   width: 22px;
   height: 22px;
 }
 .upload {
   font-size: 12px;
   color: #5e92fc;
-  text-decoration: rgb(94, 146, 252);
   font-weight: bold;
 }
-
 .dragdrop {
   font-size: 11px;
   color: #9b9fa8;
-  text-decoration: rgb(155, 159, 168);
 }

@@ -1,4 +1,4 @@
-import { Role } from './roles';
+import { Role } from './interfaces/roles';
 export const ROLES: Role[] = [
   { name: 'Performer' },
   { name: 'Director' },
